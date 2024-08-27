@@ -1,11 +1,9 @@
 package com.booststar.day13;
 
-import java.util.Scanner;
-
 public class PalindromeCheck {
 
     /*
-     * 1. Palindrome Check: Create a method to check if a given string is a
+     * 3. Palindrome Check: Create a method to check if a given string is a
      * palindrome.
      */ public static boolean isPalindrome(String str) {
         // Remove non-alphanumeric characters and convert to lowercase
