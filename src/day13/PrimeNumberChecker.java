@@ -1,4 +1,4 @@
-package com.booststar.day13;
+package day13;
 
 public class PrimeNumberChecker {
 

@@ -1,4 +1,4 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 
 /*Develop a simple menu-driven program using a switch-case statement. The
 menu should include operations like addition, subtraction, multiplication, and

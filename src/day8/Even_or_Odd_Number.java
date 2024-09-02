@@ -1,4 +1,4 @@
-package com.booststar.day8;
+package day8;
 
 import java.util.Scanner;
 

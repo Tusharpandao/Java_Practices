@@ -1,4 +1,4 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 
 /*Implement a program that prints the first 10 numbers in the Fibonacci series
 using a while loop. */

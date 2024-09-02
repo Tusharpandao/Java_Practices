@@ -1,5 +1,5 @@
-package com.booststar.day5_minor_test2;
 
+package day5_minor_test2;
 public class SumOfDigit {
     /*
      * o Task: Write a program that calculates the sum of the digits of a given

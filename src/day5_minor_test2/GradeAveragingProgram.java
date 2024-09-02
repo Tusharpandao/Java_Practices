@@ -1,6 +1,4 @@
-package com.booststar.day5_minor_test2;
-
-
+package day5_minor_test2;
 public class GradeAveragingProgram {
        /*
      * o Task: Develop a program that calculates the average of multiple grades and

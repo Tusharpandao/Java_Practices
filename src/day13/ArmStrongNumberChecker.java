@@ -1,5 +1,4 @@
-package com.booststar.day13;
-
+package day13;
 import java.util.Scanner;
 
 public class ArmStrongNumberChecker {

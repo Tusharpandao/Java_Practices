@@ -1,4 +1,4 @@
-package com.booststar.day13;
+package day13;
 public class FindMaximumInArray {
 
     /* 9. Find Maximum in Array: Implement a method to find the maximum value in

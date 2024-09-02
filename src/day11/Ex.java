@@ -1,4 +1,4 @@
-package com.booststar.day11;
+package day11;
 
 public class Ex {
 

@@ -1,4 +1,4 @@
-package com.booststar.day9;
+package day9;
 
 public class Sum_Of_Even_number {
     

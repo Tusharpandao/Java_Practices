@@ -1,7 +1,7 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 import java.util.Scanner;
 
-public class ArithmeticOperationswithUserInput {
+public class ArithmeticOperationsWithUserInput {
 
     /*
      * Write a program that takes two integer inputs from the user and performs all

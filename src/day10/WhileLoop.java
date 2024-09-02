@@ -1,4 +1,4 @@
-package com.booststar.day10;
+package day10;
 
 public class WhileLoop {
 

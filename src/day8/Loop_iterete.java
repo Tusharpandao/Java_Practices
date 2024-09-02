@@ -1,4 +1,4 @@
-package com.booststar.day8;
+package day8;
 
 public class Loop_iterete {
 

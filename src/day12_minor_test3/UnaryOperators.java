@@ -1,4 +1,4 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 
 /*Write a Java program that demonstrates the use of both pre-increment and
 post-increment operators. Use a loop to show how the values change with

@@ -1,8 +1,8 @@
-package com.booststar.day11;
+package day11;
 
 public class RightAngledTriangleProgram4 {
 
-    // Program - 4: Right-Angled Triangle Star Pattern Programm.
+    // Program - 4: Right-Angled Triangle Star Pattern Program.
 
     public static void main(String[] args) {
 

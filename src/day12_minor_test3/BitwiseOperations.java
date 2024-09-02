@@ -1,4 +1,4 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 
 import java.util.Scanner;
 /*Implement a program that takes two integers as input and displays their

@@ -1,6 +1,6 @@
-package com.booststar.day7;
-import java.util.Scanner;
 
+package day7;
+import java.util.Scanner;
 public class ComplexLoanEligibility {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

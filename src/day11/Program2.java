@@ -1,4 +1,4 @@
-package com.booststar.day11;
+package day11;
 
 //Print the table of 2 to 10:
 public class Program2 {

@@ -1,4 +1,4 @@
-package com.booststar.day9;
+package day9;
 
 public class PositiveNumberAverage {
     public static void main(String[] args) {

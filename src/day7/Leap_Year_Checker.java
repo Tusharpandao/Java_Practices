@@ -1,4 +1,4 @@
-package com.booststar.day7;
+package day7;
 import java.util.Scanner;
 
 public class Leap_Year_Checker {

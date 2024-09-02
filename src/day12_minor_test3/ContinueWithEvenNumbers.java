@@ -1,4 +1,4 @@
-package com.booststar.day12_minor_test3;
+package day12_minor_test3;
 
 /*Write a program that prints all even numbers from 1 to 50. Use a continue
 statement to skip odd numbers. */

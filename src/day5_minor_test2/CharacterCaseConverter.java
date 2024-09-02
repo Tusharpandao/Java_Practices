@@ -1,5 +1,4 @@
-package com.booststar.day5_minor_test2;
-
+package day5_minor_test2;
 public class CharacterCaseConverter {
     /*
      * o Task: Create a program that converts a lowercase character to uppercase and

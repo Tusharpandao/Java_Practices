@@ -1,5 +1,4 @@
-package com.booststar.day13;
-
+package day13;
 public class FibonacciSeries {
 
     /* 2. Fibonacci Series: Create a method to print the first n Fibonacci */

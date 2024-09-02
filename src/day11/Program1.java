@@ -1,4 +1,5 @@
-package com.booststar.day11;
+package day11;
+
 
 //Print numbers from 1 to 10
 public class Program1 {

@@ -1,4 +1,4 @@
-package com.booststar.day7;
+package day7;
 
 public class Ticket_Pricing_System {
     public static double getTicketPrice(int age) {

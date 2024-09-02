@@ -1,5 +1,4 @@
-package com.booststar.day5_minor_test2;
-
+package day5_minor_test2;
 public class ArrayElementCounter {
     /*
      * o Task: Create a program that counts the occurrence of a specific element in

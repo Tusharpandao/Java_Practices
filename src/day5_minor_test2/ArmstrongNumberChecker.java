@@ -1,4 +1,5 @@
-package com.booststar.day5_minor_test2;
+package day5_minor_test2;
+
 
 import java.util.Scanner;
 public class ArmstrongNumberChecker {

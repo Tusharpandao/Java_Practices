@@ -1,5 +1,4 @@
-package com.booststar.day13;
-
+package day13;
 public class BubbleSort {
     /* 8. Bubble Sort: Implement a method to sort an array of integers using the
 bubble sort algorithm. */
