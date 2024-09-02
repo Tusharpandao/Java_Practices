@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Operation Calculator</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#menu {
+    margin-bottom: 20px;
+}
+
+#operationSelect {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#operationContainer {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-Operation Calculator</h1>
+        <div id="menu">
+            <select id="operationSelect">
+                <option value="">Select an Operation</option>
+                <!-- Basic Level -->
+                <option value="helloWorld">Hello World Program</option>
+                <option value="sumTwoNumbers">Sum of Two Numbers</option>
+                <option value="evenOdd">Check Even or Odd</option>
+                <option value="primeCheck">Check Prime Number</option>
+                <option value="factorial">Factorial of a Number</option>
+                <option value="fibonacci">Fibonacci Series</option>
+                <option value="reverseNumber">Reverse a Number</option>
+                <option value="palindromeNumber">Palindrome Number</option>
+                <option value="armstrongNumber">Armstrong Number</option>
+                <option value="swapNumbers">Swap Two Numbers Without Using a Third Variable</option>
+                <option value="largestOfThree">Find Largest of Three Numbers</option>
+                <option value="leapYear">Check Leap Year</option>
+                <option value="sumOfDigits">Sum of Digits of a Number</option>
+                <option value="powerOfNumber">Calculate Power of a Number</option>
+                <option value="gcdLcm">Find GCD and LCM</option>
+                <option value="anagramCheck">Check Anagram Strings</option>
+                <option value="countVowelsConsonants">Count Number of Vowels and Consonants in a String</option>
+                <option value="findDuplicateChars">Find Duplicate Characters in a String</option>
+                <option value="removeWhiteSpaces">Remove All White Spaces from a String</option>
+                <option value="reverseString">Reverse a String</option>
+                
+                <!-- Intermediate Level -->
+                <option value="bubbleSort">Sort an Array Using Bubble Sort</option>
+                <option value="secondLargest">Find Second Largest Element in an Array</option>
+                <option value="binarySearch">Binary Search Implementation</option>
+                <option value="checkArraySorted">Check if Array is Sorted</option>
+                <option value="mergeSortedArrays">Merge Two Sorted Arrays</option>
+                <option value="arrayIntersection">Find the Intersection of Two Arrays</option>
+                <option value="transposeMatrix">Transpose a Matrix</option>
+                <option value="rotateMatrix">Rotate a Matrix by 90 Degrees</option>
+                <option value="rotationCheck">Check if Two Strings are Rotations of Each Other</option>
+                <option value="missingNumber">Find the Missing Number in an Array</option>
+                <option value="arraySum">Calculate Sum of Elements in an Array</option>
+                <option value="removeArrayDuplicates">Remove Duplicates from an Array</option>
+                <option value="stringToNumber">Convert a String to a Number (Without Using Library Functions)</option>
+                <option value="caesarCipher">Implement Caesar Cipher Encryption</option>
+                <option value="firstNonRepeatedChar">Find the First Non-Repeated Character in a String</option>
+                <option value="substringCheck">Check if a String is a Substring of Another String</option>
+                <option value="charFrequency">Count the Frequency of Each Character in a String</option>
+                <option value="decimalToBinary">Implement Decimal to Binary Conversion</option>
+                <option value="largestSumSubarray">Find the Largest Sum Contiguous Subarray</option>
+                <option value="perfectDeficientAbundant">Check if a Number is Perfect, Deficient, or Abundant</option>
+                
+                <!-- Advanced Level -->
+                <option value="reverseWords">Reverse Words in a String</option>
+                <option value="basicCalculator">Implement Basic Calculator (Add, Subtract, Multiply, Divide)</option>
+                <option value="dayOfWeek">Find the Day of the Week for a Given Date</option>
+                <option value="generateRandomNumbers">Generate Random Numbers within a Given Range</option>
+                <option value="compoundInterest">Calculate Compound Interest</option>
+                <option value="romanToInteger">Convert Roman Numerals to Integer</option>
+                <option value="toDoList">Create a Simple To-Do List Application</option>
+                <option value="primeNumbersRange">Find All Prime Numbers within a Given Range</option>
+                <option value="decimalToHexadecimal">Convert Decimal to Hexadecimal and Vice Versa</option>
+                <option value="sumEvenFibonacci">Find the Sum of All Even Fibonacci Numbers Below N</option>
+            </select>
+        </div>
+        <div id="operationContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

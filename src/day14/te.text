@@ -1,0 +1,1024 @@
+
+    public void helloWorld() {
+        System.out.println("Hello, World!");
+    }
+
+    public void sumOfTwoNumbers(Scanner scanner) {
+        System.out.println("Enter first number:");
+        int a = scanner.nextInt();
+        System.out.println("Enter second number:");
+        int b = scanner.nextInt();
+        System.out.println("Sum: " + (a + b));
+    }
+
+    public void checkEvenOrOdd(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        System.out.println(num + " is " + (num % 2 == 0 ? "even." : "odd."));
+    }
+
+    public void checkPrimeNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        boolean isPrime = isPrime(num);
+        System.out.println(num + " is " + (isPrime ? "a prime number." : "not a prime number."));
+    }
+
+    public boolean isPrime(int num) {
+        if (num <= 1)
+            return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public void factorialOfNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        long factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        System.out.println("Factorial of " + num + " is " + factorial);
+    }
+
+    public void fibonacciSeries(Scanner scanner) {
+        System.out.println("Enter the number of terms:");
+        int n = scanner.nextInt();
+        int a = 0, b = 1;
+        System.out.print("Fibonacci Series: " + a + " " + b);
+        for (int i = 2; i < n; i++) {
+            int next = a + b;
+            System.out.print(" " + next);
+            a = b;
+            b = next;
+        }
+        System.out.println();
+    }
+
+    public void reverseNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        int reversed = 0;
+        while (num != 0) {
+            reversed = reversed * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println("Reversed number: " + reversed);
+    }
+
+    public void palindromeNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        int original = num, reversed = 0;
+        while (num != 0) {
+            reversed = reversed * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println(original + " is " + (original == reversed ? "a palindrome." : "not a palindrome."));
+    }
+
+    public void armstrongNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        int original = num, sum = 0, digits = String.valueOf(num).length();
+        while (num != 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
+        }
+        System.out.println(original + " is " + (original == sum ? "an Armstrong number." : "not an Armstrong number."));
+    }
+
+    public void swapTwoNumbers(Scanner scanner) {
+        System.out.println("Enter first number:");
+        int a = scanner.nextInt();
+        System.out.println("Enter second number:");
+        int b = scanner.nextInt();
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swapping: First number = " + a + ", Second number = " + b);
+    }
+
+    public void findLargestOfThreeNumbers(Scanner scanner) {
+        System.out.println("Enter three numbers:");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        int largest = Math.max(a, Math.max(b, c));
+        System.out.println("Largest number is " + largest);
+    }
+
+    public void checkLeapYear(Scanner scanner) {
+        System.out.println("Enter a year:");
+        int year = scanner.nextInt();
+        boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        System.out.println(year + " is " + (isLeap ? "a leap year." : "not a leap year."));
+    }
+
+    public void sumOfDigitsOfNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        int num = scanner.nextInt();
+        int sum = 0;
+        while (num != 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        System.out.println("Sum of digits: " + sum);
+    }
+
+    public void calculatePowerOfNumber(Scanner scanner) {
+        System.out.println("Enter base:");
+        int base = scanner.nextInt();
+        System.out.println("Enter exponent:");
+        int exponent = scanner.nextInt();
+        double result = Math.pow(base, exponent);
+        System.out.println("Result: " + result);
+    }
+
+    public void findGCDAndLCM(Scanner scanner) {
+        System.out.println("Enter two numbers:");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int gcd = gcd(a, b);
+        int lcm = (a * b) / gcd;
+        System.out.println("GCD: " + gcd + ", LCM: " + lcm);
+    }
+
+    public int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public void checkAnagramStrings(Scanner scanner) {
+        System.out.println("Enter first string:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = scanner.nextLine();
+        boolean isAnagram = isAnagram(str1, str2);
+        System.out.println("Strings are " + (isAnagram ? "anagrams." : "not anagrams."));
+    }
+
+    public boolean isAnagram(String str1, String str2) {
+        char[] arr1 = str1.replaceAll("\\s", "").toLowerCase().toCharArray();
+        char[] arr2 = str2.replaceAll("\\s", "").toLowerCase().toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        return Arrays.equals(arr1, arr2);
+    }
+
+    public void countVowelsAndConsonants(Scanner scanner) {
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        int vowels = 0, consonants = 0;
+        str = str.toLowerCase();
+        for (char c : str.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("Vowels: " + vowels + ", Consonants: " + consonants);
+    }
+
+    public void findDuplicateCharacters(Scanner scanner) {
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        Map<Character, Integer> charCount = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+        }
+        System.out.println("Duplicate characters:");
+        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " appears " + entry.getValue() + " times.");
+            }
+        }
+    }
+
+    public void removeWhiteSpaces(Scanner scanner) {
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        String result = str.replaceAll("\\s+", "");
+        System.out.println("String without white spaces: " + result);
+    }
+
+    public void reverseString(Scanner scanner) {
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        String reversed = new StringBuilder(str).reverse().toString();
+        System.out.println("Reversed string: " + reversed);
+    }
+
+    public void sortArrayUsingBubbleSort(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        bubbleSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
+    }
+
+    public void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public void findSecondLargestElementInArray(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        Arrays.sort(arr);
+        System.out.println("Second largest element: " + (n > 1 ? arr[n - 2] : "Array has less than two elements."));
+    }
+
+    public void binarySearchImplementation(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements (sorted):");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        System.out.println("Enter the element to search:");
+        int target = scanner.nextInt();
+        int result = binarySearch(arr, target);
+        System.out.println("Element " + (result != -1 ? "found at index " + result : "not found"));
+    }
+
+    public int binarySearch(int[] arr, int target) {
+        int left = 0, right = arr.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == target)
+                return mid;
+            if (arr[mid] < target)
+                left = mid + 1;
+            else
+                right = mid - 1;
+        }
+        return -1;
+    }
+
+    public void checkIfArrayIsSorted(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        boolean isSorted = isSorted(arr);
+        System.out.println("Array is " + (isSorted ? "sorted." : "not sorted."));
+    }
+
+    public boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1])
+                return false;
+        }
+        return true;
+    }
+
+    public void mergeTwoSortedArrays(Scanner scanner) {
+        System.out.println("Enter the number of elements in first array:");
+        int n1 = scanner.nextInt();
+        int[] arr1 = new int[n1];
+        System.out.println("Enter the elements of first array:");
+        for (int i = 0; i < n1; i++) {
+            arr1[i] = scanner.nextInt();
+        }
+        System.out.println("Enter the number of elements in second array:");
+        int n2 = scanner.nextInt();
+        int[] arr2 = new int[n2];
+        System.out.println("Enter the elements of second array:");
+        for (int i = 0; i < n2; i++) {
+            arr2[i] = scanner.nextInt();
+        }
+        int[] merged = mergeArrays(arr1, arr2);
+        System.out.println("Merged array: " + Arrays.toString(merged));
+    }
+
+    public int[] mergeArrays(int[] arr1, int[] arr2) {
+        int[] merged = new int[arr1.length + arr2.length];
+        int i = 0, j = 0, k = 0;
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] <= arr2[j])
+                merged[k++] = arr1[i++];
+            else
+                merged[k++] = arr2[j++];
+        }
+        while (i < arr1.length)
+            merged[k++] = arr1[i++];
+        while (j < arr2.length)
+            merged[k++] = arr2[j++];
+        return merged;
+    }
+
+    public void findIntersectionOfTwoArrays(Scanner scanner) {
+        System.out.println("Enter the number of elements in first array:");
+        int n1 = scanner.nextInt();
+        int[] arr1 = new int[n1];
+        System.out.println("Enter the elements of first array:");
+        for (int i = 0; i < n1; i++) {
+            arr1[i] = scanner.nextInt();
+        }
+        System.out.println("Enter the number of elements in second array:");
+        int n2 = scanner.nextInt();
+        int[] arr2 = new int[n2];
+        System.out.println("Enter the elements of second array:");
+        for (int i = 0; i < n2; i++) {
+            arr2[i] = scanner.nextInt();
+        }
+        Set<Integer> intersection = findIntersection(arr1, arr2);
+        System.out.println("Intersection: " + intersection);
+    }
+
+    public Set<Integer> findIntersection(int[] arr1, int[] arr2) {
+        Set<Integer> set1 = new HashSet<>();
+        for (int num : arr1)
+            set1.add(num);
+        Set<Integer> intersection = new HashSet<>();
+        for (int num : arr2) {
+            if (set1.contains(num))
+                intersection.add(num);
+        }
+        return intersection;
+    }
+
+    public void transposeMatrix(Scanner scanner) {
+        System.out.println("Enter the number of rows and columns:");
+        int rows = scanner.nextInt();
+        int cols = scanner.nextInt();
+        int[][] matrix = new int[rows][cols];
+        System.out.println("Enter the matrix elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        int[][] transposed = transpose(matrix);
+        System.out.println("Transposed matrix:");
+        for (int[] row : transposed) {
+            System.out.println(Arrays.toString(row));
+        }
+    }
+
+    public int[][] transpose(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] transposed = new int[cols][rows];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                transposed[j][i] = matrix[i][j];
+            }
+        }
+        return transposed;
+    }
+
+    public void rotateMatrixBy90Degrees(Scanner scanner) {
+        System.out.println("Enter the number of rows and columns:");
+        int rows = scanner.nextInt();
+        int cols = scanner.nextInt();
+        int[][] matrix = new int[rows][cols];
+        System.out.println("Enter the matrix elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        int[][] rotated = rotateBy90Degrees(matrix);
+        System.out.println("Matrix rotated by 90 degrees:");
+        for (int[] row : rotated) {
+            System.out.println(Arrays.toString(row));
+        }
+    }
+
+    public int[][] rotateBy90Degrees(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] rotated = new int[cols][rows];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                rotated[j][rows - 1 - i] = matrix[i][j];
+            }
+        }
+        return rotated;
+    }
+
+    public void checkIfTwoStringsAreRotations(Scanner scanner) {
+        System.out.println("Enter first string:");
+        String str1 = scanner.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = scanner.nextLine();
+        boolean isRotation = isRotation(str1, str2);
+        System.out.println("Strings are " + (isRotation ? "rotations of each other." : "not rotations of each other."));
+    }
+
+    public boolean isRotation(String str1, String str2) {
+        if (str1.length() != str2.length())
+            return false;
+        String combined = str1 + str1;
+        return combined.contains(str2);
+    }
+
+    public int findMissingNumber(int[] arr, int n) {
+        int totalSum = n * (n + 1) / 2;
+        int arraySum = Arrays.stream(arr).sum();
+        return totalSum - arraySum;
+    }
+
+    public void calculateSumOfArrayElements(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int sum = Arrays.stream(arr).sum();
+        System.out.println("Sum of elements: " + sum);
+    }
+
+    public void simpleECommerceCartSystem(Scanner scanner) {
+        while (true) {
+            System.out.println("1. Add Item\n2. Remove Item\n3. View Cart\n4. Checkout\n5. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    addItem(scanner);
+                    break;
+                case 2:
+                    removeItem(scanner);
+                    break;
+                case 3:
+                    viewCart();
+                    break;
+                case 4:
+                    checkout();
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void addItem(Scanner scanner) {
+        System.out.println("Enter item name:");
+        String item = scanner.nextLine();
+        System.out.println("Enter item price:");
+        double price = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+        cart.put(item, price);
+        System.out.println(item + " added to cart.");
+    }
+
+    public void removeItem(Scanner scanner) {
+        System.out.println("Enter item name to remove:");
+        String item = scanner.nextLine();
+        if (cart.remove(item) != null) {
+            System.out.println(item + " removed from cart.");
+        } else {
+            System.out.println(item + " not found in cart.");
+        }
+    }
+
+    public void viewCart() {
+        if (cart.isEmpty()) {
+            System.out.println("Cart is empty.");
+        } else {
+            System.out.println("Cart items:");
+            for (Map.Entry<String, Double> entry : cart.entrySet()) {
+                System.out.println("Item: " + entry.getKey() + ", Price: " + entry.getValue());
+            }
+        }
+    }
+
+    public void checkout() {
+        if (cart.isEmpty()) {
+            System.out.println("Cart is empty. Nothing to checkout.");
+        } else {
+            double total = cart.values().stream().mapToDouble(Double::doubleValue).sum();
+            System.out.println("Total amount: $" + total);
+            cart.clear();
+            System.out.println("Checked out. Cart is now empty.");
+        }
+
+    }
+
+    public void findMissingNumberInArray(Scanner scanner) {
+        System.out.println("Enter the number of elements (n-1):");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements (1 to n):");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int missingNumber = findMissingNumber(arr, n + 1);
+        System.out.println("Missing number: " + missingNumber);
+    }
+
+    public void removeDuplicatesFromArray(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int[] uniqueArr = Arrays.stream(arr).distinct().toArray();
+        System.out.println("Array after removing duplicates: " + Arrays.toString(uniqueArr));
+    }
+
+    public void convertStringToNumber(Scanner scanner) {
+        System.out.println("Enter the string to convert to number:");
+        String str = scanner.nextLine();
+        try {
+            int number = Integer.parseInt(str);
+            System.out.println("Converted number: " + number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Not a valid number.");
+        }
+    }
+
+    public void caesarCipherEncryption(Scanner scanner) {
+        System.out.println("Enter the text to encrypt:");
+        String text = scanner.nextLine();
+        System.out.println("Enter shift value:");
+        int shift = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        String encrypted = caesarCipher(text, shift);
+        System.out.println("Encrypted text: " + encrypted);
+    }
+
+    public String caesarCipher(String text, int shift) {
+        StringBuilder result = new StringBuilder();
+        for (char i : text.toCharArray()) {
+            if (Character.isLetter(i)) {
+                char base = Character.isUpperCase(i) ? 'A' : 'a';
+                result.append((char) ((i - base + shift) % 26 + base));
+            } else {
+                result.append(i);
+            }
+        }
+        return result.toString();
+    }
+
+    public void findFirstNonRepeatedCharacter(Scanner scanner) {
+        System.out.println("Enter the string:");
+        String str = scanner.nextLine();
+        Character result = findFirstNonRepeatedCharacter(str);
+        System.out.println("First non-repeated character: " + (result != null ? result : "None"));
+    }
+
+    public Character findFirstNonRepeatedCharacter(String str) {
+        Map<Character, Integer> counts = new LinkedHashMap<>();
+        for (char c : str.toCharArray()) {
+            counts.put(c, counts.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : counts.entrySet()) {
+            if (entry.getValue() == 1)
+                return entry.getKey();
+        }
+        return null;
+    }
+
+    public void checkIfStringIsSubstring(Scanner scanner) {
+        System.out.println("Enter the main string:");
+        String mainStr = scanner.nextLine();
+        System.out.println("Enter the substring:");
+        String subStr = scanner.nextLine();
+        boolean isSubstring = mainStr.contains(subStr);
+        System.out.println("The substring is " + (isSubstring ? "" : "not ") + "found in the main string.");
+    }
+
+    public void countCharacterFrequency(Scanner scanner) {
+        System.out.println("Enter the string:");
+        String str = scanner.nextLine();
+        Map<Character, Integer> frequencyMap = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
+        }
+        System.out.println("Character frequencies: " + frequencyMap);
+    }
+
+    public void decimalToBinaryConversion(Scanner scanner) {
+        System.out.println("Enter a decimal number:");
+        int decimal = scanner.nextInt();
+        String binary = Integer.toBinaryString(decimal);
+        System.out.println("Binary representation: " + binary);
+    }
+
+    public void largestSumContiguousSubarray(Scanner scanner) {
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int maxSum = findLargestSumContiguousSubarray(arr);
+        System.out.println("Largest sum of contiguous subarray: " + maxSum);
+    }
+
+    public int findLargestSumContiguousSubarray(int[] arr) {
+        int maxSum = Integer.MIN_VALUE, currentSum = 0;
+        for (int num : arr) {
+            currentSum = Math.max(num, currentSum + num);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+        return maxSum;
+    }
+
+    public void checkNumberPerfectDeficientAbundant(Scanner scanner) {
+        System.out.println("Enter the number:");
+        int number = scanner.nextInt();
+        String type = classifyNumber(number);
+        System.out.println("The number is " + type);
+    }
+
+    public String classifyNumber(int number) {
+        int sum = findSumOfDivisors(number);
+        if (sum == number)
+            return "Perfect";
+        else if (sum < number)
+            return "Deficient";
+        else
+            return "Abundant";
+    }
+
+    public int findSumOfDivisors(int number) {
+        int sum = 0;
+        for (int i = 1; i <= number / 2; i++) {
+            if (number % i == 0)
+                sum += i;
+        }
+        return sum;
+    }
+
+    public void reverseWordsInString(Scanner scanner) {
+        System.out.println("Enter the string:");
+        String str = scanner.nextLine();
+        String reversed = reverseWords(str);
+        System.out.println("Reversed words: " + reversed);
+    }
+
+    public String reverseWords(String str) {
+        String[] words = str.split(" ");
+        StringBuilder reversed = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed.append(words[i]).append(" ");
+        }
+        return reversed.toString().trim();
+    }
+
+    public void findLongestWordInSentence(Scanner scanner) {
+        System.out.println("Enter the sentence:");
+        String sentence = scanner.nextLine();
+        String longestWord = Arrays.stream(sentence.split(" "))
+                .max(Comparator.comparingInt(String::length))
+                .orElse("");
+        System.out.println("Longest word: " + longestWord);
+    }
+
+    public void checkIfSentenceIsPangram(Scanner scanner) {
+        System.out.println("Enter the sentence:");
+        String sentence = scanner.nextLine().toLowerCase();
+        boolean isPangram = sentence.chars().distinct().filter(Character::isLetter).count() == 26;
+        System.out.println("The sentence is " + (isPangram ? "" : "not ") + "a pangram.");
+    }
+
+    public void basicCalculator(Scanner scanner) {
+        System.out.println("Enter first number:");
+        double num1 = scanner.nextDouble();
+        System.out.println("Enter second number:");
+        double num2 = scanner.nextDouble();
+        System.out.println("Enter operation (+, -, *, /):");
+        char op = scanner.next().charAt(0);
+        double result = performCalculation(num1, num2, op);
+        System.out.println("Result: " + result);
+    }
+
+    public double performCalculation(double num1, double num2, char op) {
+        switch (op) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '*':
+                return num1 * num2;
+            case '/':
+                return num1 / num2;
+            default:
+                throw new IllegalArgumentException("Invalid operator");
+        }
+    }
+
+    public void findDayOfWeek(Scanner scanner) {
+        System.out.println("Enter date (YYYY-MM-DD):");
+        String date = scanner.nextLine();
+        LocalDate localDate = LocalDate.parse(date);
+        DayOfWeek dayOfWeek = localDate.getDayOfWeek();
+        System.out.println("Day of the week: " + dayOfWeek);
+    }
+
+    public void generateRandomNumbers(Scanner scanner) {
+        System.out.println("Enter the number of random numbers to generate:");
+        int count = scanner.nextInt();
+        System.out.println("Enter the minimum value:");
+        int min = scanner.nextInt();
+        System.out.println("Enter the maximum value:");
+        int max = scanner.nextInt();
+        Random random = new Random();
+        System.out.println("Random numbers:");
+        for (int i = 0; i < count; i++) {
+            System.out.println(random.nextInt((max - min) + 1) + min);
+        }
+    }
+
+    public void simpleBankingSystem(Scanner scanner) {
+        double balance = 0.0;
+        while (true) {
+            System.out.println("1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter amount to deposit:");
+                    double deposit = scanner.nextDouble();
+                    balance += deposit;
+                    System.out.println("Deposited: $" + deposit);
+                    break;
+                case 2:
+                    System.out.println("Enter amount to withdraw:");
+                    double withdraw = scanner.nextDouble();
+                    if (withdraw > balance) {
+                        System.out.println("Insufficient funds.");
+                    } else {
+                        balance -= withdraw;
+                        System.out.println("Withdrawn: $" + withdraw);
+                    }
+                    break;
+                case 3:
+                    System.out.println("Current balance: $" + balance);
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void simulateVotingSystem(Scanner scanner) {
+        Map<String, Integer> votes = new HashMap<>();
+        while (true) {
+            System.out.println("1. Vote\n2. Show Results\n3. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter candidate name:");
+                    String candidate = scanner.nextLine();
+                    votes.put(candidate, votes.getOrDefault(candidate, 0) + 1);
+                    System.out.println("Vote casted for " + candidate);
+                    break;
+                case 2:
+                    System.out.println("Voting results:");
+                    for (Map.Entry<String, Integer> entry : votes.entrySet()) {
+                        System.out.println(entry.getKey() + ": " + entry.getValue() + " votes");
+                    }
+                    break;
+                case 3:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void simpleLibraryManagementSystem(Scanner scanner) {
+        List<String> books = new ArrayList<>();
+        while (true) {
+            System.out.println("1. Add Book\n2. Remove Book\n3. View Books\n4. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter book title:");
+                    String bookTitle = scanner.nextLine();
+                    books.add(bookTitle);
+                    System.out.println("Book added: " + bookTitle);
+                    break;
+                case 2:
+                    System.out.println("Enter book title to remove:");
+                    bookTitle = scanner.nextLine();
+                    if (books.remove(bookTitle)) {
+                        System.out.println("Book removed: " + bookTitle);
+                    } else {
+                        System.out.println("Book not found.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Books in library:");
+                    for (String book : books) {
+                        System.out.println(book);
+                    }
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void simulateATM(Scanner scanner) {
+        double balance = 0.0;
+        while (true) {
+            System.out.println("1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter amount to deposit:");
+                    double deposit = scanner.nextDouble();
+                    balance += deposit;
+                    System.out.println("Deposited: $" + deposit);
+                    break;
+                case 2:
+                    System.out.println("Enter amount to withdraw:");
+                    double withdraw = scanner.nextDouble();
+                    if (withdraw > balance) {
+                        System.out.println("Insufficient funds.");
+                    } else {
+                        balance -= withdraw;
+                        System.out.println("Withdrawn: $" + withdraw);
+                    }
+                    break;
+                case 3:
+                    System.out.println("Current balance: $" + balance);
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void calculateCompoundInterest(Scanner scanner) {
+        System.out.println("Enter principal amount:");
+        double principal = scanner.nextDouble();
+        System.out.println("Enter annual interest rate (in %):");
+        double rate = scanner.nextDouble() / 100;
+        System.out.println("Enter number of times interest applied per year:");
+        int n = scanner.nextInt();
+        System.out.println("Enter number of years:");
+        int time = scanner.nextInt();
+        double compoundInterest = principal * Math.pow(1 + rate / n, n * time) - principal;
+        System.out.println("Compound interest: $" + compoundInterest);
+    }
+
+    public void simpleStudentGradingSystem(Scanner scanner) {
+        System.out.println("Enter number of students:");
+        int numStudents = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        Map<String, Integer> grades = new HashMap<>();
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Enter student name:");
+            String name = scanner.nextLine();
+            System.out.println("Enter grade for " + name + ":");
+            int grade = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            grades.put(name, grade);
+        }
+        System.out.println("Student Grades:");
+        for (Map.Entry<String, Integer> entry : grades.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
+    public void convertRomanNumeralsToInteger(Scanner scanner) {
+        System.out.println("Enter Roman numeral:");
+        String roman = scanner.nextLine();
+        int result = romanToInt(roman);
+        System.out.println("Integer value: " + result);
+    }
+
+    public int romanToInt(String roman) {
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+
+        int total = 0;
+        int prevValue = 0;
+        for (char c : roman.toCharArray()) {
+            int value = map.get(c);
+            if (value > prevValue) {
+                total += value - 2 * prevValue;
+            } else {
+                total += value;
+            }
+            prevValue = value;
+        }
+        return total;
+    }
+
+    public void simpleToDoListApplication(Scanner scanner) {
+        List<String> toDoList = new ArrayList<>();
+        while (true) {
+            System.out.println("1. Add Task\n2. Remove Task\n3. View Tasks\n4. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter task:");
+                    String task = scanner.nextLine();
+                    toDoList.add(task);
+                    System.out.println("Task added: " + task);
+                    break;
+                case 2:
+                    System.out.println("Enter task to remove:");
+                    task = scanner.nextLine();
+                    if (toDoList.remove(task)) {
+                        System.out.println("Task removed: " + task);
+                    } else {
+                        System.out.println("Task not found.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("To-Do List:");
+                    for (String t : toDoList) {
+                        System.out.println(t);
+                    }
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+    }
+
+    public void findAllPrimeNumbers(Scanner scanner) {
+        System.out.println("Enter the upper limit:");
+        int limit = scanner.nextInt();
+        List<Integer> primes = new ArrayList<>();
+        for (int i = 2; i <= limit; i++) {
+            if (isPrime(i)) {
+                primes.add(i);
+            }
+        }
+        System.out.println("Prime numbers: " + primes);
+    }
+
+    public void generateFirstNPrimeNumbers(Scanner scanner) {
+        System.out.println("Enter the number of prime numbers to generate:");
+        int n = scanner.nextInt();
+        List<Integer> primes = new ArrayList<>();
+        int count = 0;
+        int num = 2;
+        while (count < n) {
+            if (isPrime(num)) {
+                primes.add(num);
+                count++;
+            }
+            num++;
+        }
+        System.out.println("First " + n + " prime numbers: " + primes);
+    }
+
