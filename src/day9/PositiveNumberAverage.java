@@ -23,7 +23,7 @@ public class PositiveNumberAverage {
             double finalAverage = (double) sum / count;
             System.out.printf("The average of positive numbers is: %.2f%n", finalAverage);
         } else {
-            System.out.println("No positive numbers found in the array.");
+           System.out.println("No positive numbers found in the array.");
         }
     }
 }
